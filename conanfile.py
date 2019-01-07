@@ -4,6 +4,8 @@
 from conans import ConanFile, CMake, tools
 from conans.errors import ConanException
 import os
+import shutil
+
 
 def sort_libs(correct_order, libs, lib_suffix='', reverse_result=False):
     # Add suffix for correct string matching
@@ -20,6 +22,7 @@ def sort_libs(correct_order, libs, lib_suffix='', reverse_result=False):
         result.reverse()
 
     return result
+
 
 class LibnameConan(ConanFile):
     name = "corrade"
